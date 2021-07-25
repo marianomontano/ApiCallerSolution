@@ -9,12 +9,12 @@ namespace Api_Caller.UI.RequestManagers
 	public class PostRequestManager : IRequestManager
 	{
 		private HttpHelper httpHelper;
-		private readonly SimpleFactory simpleFactory;
+		private readonly SimpleFactory factory;
 
 		public PostRequestManager(SimpleFactory simpleFactory)
 		{
-			this.simpleFactory = simpleFactory;
-			this.httpHelper = simpleFactory.GetHttpHelperInstance();
+			factory = simpleFactory;
+			httpHelper = simpleFactory.GetHttpHelperInstance();
 			Parameters = simpleFactory.GetDictionaryInstance();
 			Headers = simpleFactory.GetDictionaryInstance();
 		}
@@ -30,10 +30,10 @@ namespace Api_Caller.UI.RequestManagers
 
 			string body = GetBodyString();
 
-			httpHelper.Client.BaseAddress = new Uri(Url);
+			httpHelper.SetClientUrl(Url);
 			Response = await httpHelper.PostResponseAsync(body);
 
-			httpHelper.Client.Dispose();
+			httpHelper.DisposeHttpClient();
 		}
 
 		private void SetRequestHeaders()
@@ -44,7 +44,7 @@ namespace Api_Caller.UI.RequestManagers
 
 		private string GetBodyString()
 		{
-			var stringBuilder = simpleFactory.GetStringBuilderInstance();
+			var stringBuilder = factory.GetStringBuilderInstance();
 			stringBuilder.Append("{");
 			if (Parameters != null && Parameters.Count > 0)
 			{

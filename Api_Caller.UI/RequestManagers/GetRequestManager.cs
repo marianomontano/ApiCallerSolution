@@ -41,7 +41,7 @@ namespace Api_Caller.UI.RequestManagers
 
 			Response = await httpHelper.GetResponseAsync();
 
-			httpHelper.Client.Dispose();
+			httpHelper.DisposeHttpClient();
 		}
 
 		private void SetRequestHeaders()

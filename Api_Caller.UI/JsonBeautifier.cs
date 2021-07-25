@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Api_Caller.UI
 {
-	public  class JsonBeautifier
+	public class JsonBeautifier
 	{
 		private readonly SimpleFactory simpleFactory;
 
@@ -19,6 +19,11 @@ namespace Api_Caller.UI
 
 		public string Beautify(string json)
 		{
+			if (json == null || json == "")
+			{
+				return "{ }";
+			}
+
 			using (var document = JsonDocument.Parse(json))
 			{
 				using (var stream = simpleFactory.GetMemoryStreamInstance())

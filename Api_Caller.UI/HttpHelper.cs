@@ -9,10 +9,9 @@ namespace Api_Caller.UI
 {
 	public class HttpHelper
 	{
-		private static HttpHelper httpHelper;
 		private readonly SimpleFactory factory;
 		private readonly JsonBeautifier JsonBeautifier;
-		public  HttpClient Client { get; private set; }
+		private HttpClient Client;
 
 
 		public HttpHelper(SimpleFactory simpleFactory)
@@ -26,17 +25,47 @@ namespace Api_Caller.UI
 		public HttpHelper SetClientUrl(string url)
 		{
 			Client.BaseAddress = new Uri(url);
-			return httpHelper;
+			return this;
+		}
+
+		public void DisposeHttpClient()
+		{
+			Client.Dispose();
 		}
 
 		public HttpHelper SetClientHeaders(Dictionary<string, string> headers)
 		{
 			Client.DefaultRequestHeaders.Clear();
+
 			foreach (var header in headers)
 			{
 				Client.DefaultRequestHeaders.Add(header.Key, header.Value);
 			}
-			return httpHelper;
+
+			return this;
+		}
+
+		internal async Task<string> DeleteResponseAsync()
+		{
+			var response = await Client.DeleteAsync("");
+
+			StringBuilder stringBuilder = factory.GetStringBuilderInstance();
+
+			stringBuilder.AppendLine("Response Status Code:");
+			stringBuilder.AppendLine($"{(int)response.StatusCode} {response.ReasonPhrase} {Environment.NewLine}");
+
+			stringBuilder.AppendLine("Response Headers:");
+
+			foreach (var header in response.Headers)
+				stringBuilder.AppendLine(header.ToString());
+
+			var body = await response.Content.ReadAsStringAsync();
+			stringBuilder.AppendLine($"{Environment.NewLine} Response Body:");
+
+			stringBuilder.Append(JsonBeautifier.Beautify(body));
+			var responseString = stringBuilder.ToString();
+
+			return responseString;
 		}
 
 		public async Task<string> GetResponseAsync()
@@ -57,14 +86,15 @@ namespace Api_Caller.UI
 			stringBuilder.AppendLine($"{Environment.NewLine} Response Body:");
 
 			stringBuilder.Append(JsonBeautifier.Beautify(body));
-			return stringBuilder.ToString();
+			var responseString = stringBuilder.ToString();
+
+			return responseString;
 		}
 
 		public async Task<string> PostResponseAsync(string body)
 		{
 			HttpContent content = factory.GetStringContentInstance(body);
 			var response = await Client.PostAsync("", content);
-
 
 			StringBuilder stringBuilder = factory.GetStringBuilderInstance();
 
@@ -80,7 +110,33 @@ namespace Api_Caller.UI
 			stringBuilder.AppendLine($"{Environment.NewLine} Response Body:");
 
 			stringBuilder.Append(JsonBeautifier.Beautify(jsonBody));
-			return stringBuilder.ToString();
+			var responseString = stringBuilder.ToString();
+
+			return responseString;
+		}
+
+		public async Task<string> PutResponseAsync(string body)
+		{
+			HttpContent content = factory.GetStringContentInstance(body);
+			var response = await Client.PutAsync("", content);
+
+			StringBuilder stringBuilder = factory.GetStringBuilderInstance();
+
+			stringBuilder.AppendLine("Response Status Code:");
+			stringBuilder.AppendLine($"{(int)response.StatusCode} {response.ReasonPhrase} {Environment.NewLine}");
+
+			stringBuilder.AppendLine("Response Headers:");
+
+			foreach (var header in response.Headers)
+				stringBuilder.AppendLine(header.ToString());
+
+			var jsonBody = await response.Content.ReadAsStringAsync();
+			stringBuilder.AppendLine($"{Environment.NewLine} Response Body:");
+
+			stringBuilder.Append(JsonBeautifier.Beautify(jsonBody));
+			var responseString = stringBuilder.ToString();
+
+			return responseString;
 		}
 	}
 }

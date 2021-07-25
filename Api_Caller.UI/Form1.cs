@@ -104,5 +104,11 @@ namespace Api_Caller
 
 			return manager;
 		}
+
+		private void btnClearParams_Click(object sender, EventArgs e)
+		{
+			dgvBody.Rows.Clear();
+			dgvHeaders.Rows.Clear();
+		}
 	}
 }

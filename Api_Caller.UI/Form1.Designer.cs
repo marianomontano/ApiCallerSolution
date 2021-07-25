@@ -29,6 +29,7 @@ namespace Api_Caller
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.radioDelete = new System.Windows.Forms.RadioButton();
@@ -36,7 +37,10 @@ namespace Api_Caller
 			this.radioPost = new System.Windows.Forms.RadioButton();
 			this.radioGet = new System.Windows.Forms.RadioButton();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.panel5 = new System.Windows.Forms.Panel();
 			this.btnSend = new System.Windows.Forms.Button();
+			this.panel4 = new System.Windows.Forms.Panel();
+			this.btnClearParams = new System.Windows.Forms.Button();
 			this.txtUrl = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
@@ -44,32 +48,43 @@ namespace Api_Caller
 			this.label4 = new System.Windows.Forms.Label();
 			this.txtResponse = new System.Windows.Forms.TextBox();
 			this.panelRequest = new System.Windows.Forms.Panel();
+			this.PanelHeaders = new System.Windows.Forms.Panel();
+			this.panel11 = new System.Windows.Forms.Panel();
 			this.dgvHeaders = new System.Windows.Forms.DataGridView();
 			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.panel10 = new System.Windows.Forms.Panel();
 			this.label3 = new System.Windows.Forms.Label();
+			this.panelParameters = new System.Windows.Forms.Panel();
+			this.panel9 = new System.Windows.Forms.Panel();
 			this.dgvBody = new System.Windows.Forms.DataGridView();
 			this.key = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.panel8 = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.panel2.SuspendLayout();
+			this.panel5.SuspendLayout();
+			this.panel4.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panelResponse.SuspendLayout();
 			this.panelRequest.SuspendLayout();
+			this.PanelHeaders.SuspendLayout();
+			this.panel11.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvHeaders)).BeginInit();
+			this.panel10.SuspendLayout();
+			this.panelParameters.SuspendLayout();
+			this.panel9.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvBody)).BeginInit();
+			this.panel8.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel1
 			// 
 			this.panel1.Controls.Add(this.groupBox1);
-			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel1.Location = new System.Drawing.Point(0, 0);
+			resources.ApplyResources(this.panel1, "panel1");
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(1086, 61);
-			this.panel1.TabIndex = 0;
 			// 
 			// groupBox1
 			// 
@@ -78,150 +93,129 @@ namespace Api_Caller
 			this.groupBox1.Controls.Add(this.radioPut);
 			this.groupBox1.Controls.Add(this.radioPost);
 			this.groupBox1.Controls.Add(this.radioGet);
-			this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+			resources.ApplyResources(this.groupBox1, "groupBox1");
 			this.groupBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-			this.groupBox1.Location = new System.Drawing.Point(0, 0);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(1086, 61);
-			this.groupBox1.TabIndex = 0;
 			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Method Verbs";
 			// 
 			// radioDelete
 			// 
-			this.radioDelete.AutoSize = true;
-			this.radioDelete.Location = new System.Drawing.Point(514, 21);
+			resources.ApplyResources(this.radioDelete, "radioDelete");
 			this.radioDelete.Name = "radioDelete";
-			this.radioDelete.Size = new System.Drawing.Size(83, 21);
-			this.radioDelete.TabIndex = 3;
 			this.radioDelete.TabStop = true;
-			this.radioDelete.Text = "DELETE";
 			this.radioDelete.UseVisualStyleBackColor = true;
 			// 
 			// radioPut
 			// 
-			this.radioPut.AutoSize = true;
-			this.radioPut.Location = new System.Drawing.Point(390, 21);
+			resources.ApplyResources(this.radioPut, "radioPut");
 			this.radioPut.Name = "radioPut";
-			this.radioPut.Size = new System.Drawing.Size(57, 21);
-			this.radioPut.TabIndex = 2;
 			this.radioPut.TabStop = true;
-			this.radioPut.Text = "PUT";
 			this.radioPut.UseVisualStyleBackColor = true;
 			// 
 			// radioPost
 			// 
-			this.radioPost.AutoSize = true;
-			this.radioPost.Location = new System.Drawing.Point(253, 21);
+			resources.ApplyResources(this.radioPost, "radioPost");
 			this.radioPost.Name = "radioPost";
-			this.radioPost.Size = new System.Drawing.Size(67, 21);
-			this.radioPost.TabIndex = 1;
 			this.radioPost.TabStop = true;
-			this.radioPost.Text = "POST";
 			this.radioPost.UseVisualStyleBackColor = true;
 			// 
 			// radioGet
 			// 
-			this.radioGet.AutoSize = true;
-			this.radioGet.Location = new System.Drawing.Point(121, 21);
+			resources.ApplyResources(this.radioGet, "radioGet");
 			this.radioGet.Name = "radioGet";
-			this.radioGet.Size = new System.Drawing.Size(58, 21);
-			this.radioGet.TabIndex = 0;
 			this.radioGet.TabStop = true;
-			this.radioGet.Text = "GET";
 			this.radioGet.UseVisualStyleBackColor = true;
 			// 
 			// panel2
 			// 
-			this.panel2.Controls.Add(this.btnSend);
+			this.panel2.Controls.Add(this.panel5);
+			this.panel2.Controls.Add(this.panel4);
 			this.panel2.Controls.Add(this.txtUrl);
 			this.panel2.Controls.Add(this.label1);
-			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel2.Location = new System.Drawing.Point(0, 61);
+			resources.ApplyResources(this.panel2, "panel2");
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(1086, 63);
-			this.panel2.TabIndex = 3;
+			// 
+			// panel5
+			// 
+			this.panel5.Controls.Add(this.btnSend);
+			resources.ApplyResources(this.panel5, "panel5");
+			this.panel5.Name = "panel5";
 			// 
 			// btnSend
 			// 
-			this.btnSend.Location = new System.Drawing.Point(928, 9);
+			resources.ApplyResources(this.btnSend, "btnSend");
 			this.btnSend.Name = "btnSend";
-			this.btnSend.Size = new System.Drawing.Size(105, 37);
-			this.btnSend.TabIndex = 2;
-			this.btnSend.Text = "Send";
 			this.btnSend.UseVisualStyleBackColor = true;
 			this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
 			// 
+			// panel4
+			// 
+			this.panel4.Controls.Add(this.btnClearParams);
+			resources.ApplyResources(this.panel4, "panel4");
+			this.panel4.Name = "panel4";
+			// 
+			// btnClearParams
+			// 
+			resources.ApplyResources(this.btnClearParams, "btnClearParams");
+			this.btnClearParams.Name = "btnClearParams";
+			this.btnClearParams.UseVisualStyleBackColor = true;
+			this.btnClearParams.Click += new System.EventHandler(this.btnClearParams_Click);
+			// 
 			// txtUrl
 			// 
-			this.txtUrl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtUrl.Location = new System.Drawing.Point(74, 12);
+			resources.ApplyResources(this.txtUrl, "txtUrl");
 			this.txtUrl.Name = "txtUrl";
-			this.txtUrl.Size = new System.Drawing.Size(848, 30);
-			this.txtUrl.TabIndex = 1;
 			// 
 			// label1
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			resources.ApplyResources(this.label1, "label1");
 			this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.label1.Location = new System.Drawing.Point(12, 15);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(56, 25);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "URL:";
 			// 
 			// panel3
 			// 
 			this.panel3.Controls.Add(this.panelResponse);
 			this.panel3.Controls.Add(this.panelRequest);
-			this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel3.Location = new System.Drawing.Point(0, 124);
+			resources.ApplyResources(this.panel3, "panel3");
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(1086, 538);
-			this.panel3.TabIndex = 4;
 			// 
 			// panelResponse
 			// 
 			this.panelResponse.Controls.Add(this.label4);
 			this.panelResponse.Controls.Add(this.txtResponse);
-			this.panelResponse.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panelResponse.Location = new System.Drawing.Point(632, 0);
+			resources.ApplyResources(this.panelResponse, "panelResponse");
 			this.panelResponse.Name = "panelResponse";
-			this.panelResponse.Size = new System.Drawing.Size(454, 538);
-			this.panelResponse.TabIndex = 1;
 			// 
 			// label4
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(6, 5);
+			resources.ApplyResources(this.label4, "label4");
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(76, 17);
-			this.label4.TabIndex = 1;
-			this.label4.Text = "Response:";
 			// 
 			// txtResponse
 			// 
-			this.txtResponse.Location = new System.Drawing.Point(0, 29);
-			this.txtResponse.Multiline = true;
+			resources.ApplyResources(this.txtResponse, "txtResponse");
 			this.txtResponse.Name = "txtResponse";
 			this.txtResponse.ReadOnly = true;
-			this.txtResponse.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.txtResponse.Size = new System.Drawing.Size(454, 506);
-			this.txtResponse.TabIndex = 0;
-			this.txtResponse.WordWrap = false;
 			// 
 			// panelRequest
 			// 
-			this.panelRequest.Controls.Add(this.dgvHeaders);
-			this.panelRequest.Controls.Add(this.label3);
-			this.panelRequest.Controls.Add(this.dgvBody);
-			this.panelRequest.Controls.Add(this.label2);
-			this.panelRequest.Dock = System.Windows.Forms.DockStyle.Left;
-			this.panelRequest.Location = new System.Drawing.Point(0, 0);
+			this.panelRequest.Controls.Add(this.PanelHeaders);
+			this.panelRequest.Controls.Add(this.panelParameters);
+			resources.ApplyResources(this.panelRequest, "panelRequest");
 			this.panelRequest.Name = "panelRequest";
-			this.panelRequest.Size = new System.Drawing.Size(632, 538);
-			this.panelRequest.TabIndex = 0;
+			// 
+			// PanelHeaders
+			// 
+			this.PanelHeaders.Controls.Add(this.panel11);
+			this.PanelHeaders.Controls.Add(this.panel10);
+			resources.ApplyResources(this.PanelHeaders, "PanelHeaders");
+			this.PanelHeaders.Name = "PanelHeaders";
+			// 
+			// panel11
+			// 
+			this.panel11.Controls.Add(this.dgvHeaders);
+			resources.ApplyResources(this.panel11, "panel11");
+			this.panel11.Name = "panel11";
 			// 
 			// dgvHeaders
 			// 
@@ -230,94 +224,111 @@ namespace Api_Caller
 			this.dgvHeaders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-			this.dgvHeaders.Location = new System.Drawing.Point(4, 363);
+			resources.ApplyResources(this.dgvHeaders, "dgvHeaders");
 			this.dgvHeaders.MultiSelect = false;
 			this.dgvHeaders.Name = "dgvHeaders";
 			this.dgvHeaders.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
 			this.dgvHeaders.RowTemplate.Height = 24;
-			this.dgvHeaders.Size = new System.Drawing.Size(625, 172);
-			this.dgvHeaders.TabIndex = 3;
 			// 
 			// dataGridViewTextBoxColumn1
 			// 
-			this.dataGridViewTextBoxColumn1.HeaderText = "Key";
-			this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+			resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
 			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
 			// 
 			// dataGridViewTextBoxColumn2
 			// 
-			this.dataGridViewTextBoxColumn2.HeaderText = "Value";
-			this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+			resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
 			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+			// 
+			// panel10
+			// 
+			this.panel10.Controls.Add(this.label3);
+			resources.ApplyResources(this.panel10, "panel10");
+			this.panel10.Name = "panel10";
 			// 
 			// label3
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(10, 339);
+			resources.ApplyResources(this.label3, "label3");
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(66, 17);
-			this.label3.TabIndex = 2;
-			this.label3.Text = "Headers:";
+			// 
+			// panelParameters
+			// 
+			resources.ApplyResources(this.panelParameters, "panelParameters");
+			this.panelParameters.Controls.Add(this.panel9);
+			this.panelParameters.Controls.Add(this.panel8);
+			this.panelParameters.Name = "panelParameters";
+			// 
+			// panel9
+			// 
+			this.panel9.Controls.Add(this.dgvBody);
+			resources.ApplyResources(this.panel9, "panel9");
+			this.panel9.Name = "panel9";
 			// 
 			// dgvBody
 			// 
+			resources.ApplyResources(this.dgvBody, "dgvBody");
 			this.dgvBody.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvBody.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvBody.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.key,
             this.value});
-			this.dgvBody.Location = new System.Drawing.Point(5, 29);
 			this.dgvBody.MultiSelect = false;
 			this.dgvBody.Name = "dgvBody";
 			this.dgvBody.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
 			this.dgvBody.RowTemplate.Height = 24;
-			this.dgvBody.Size = new System.Drawing.Size(625, 296);
-			this.dgvBody.TabIndex = 1;
 			// 
 			// key
 			// 
-			this.key.HeaderText = "Key";
-			this.key.MinimumWidth = 6;
+			resources.ApplyResources(this.key, "key");
 			this.key.Name = "key";
 			// 
 			// value
 			// 
-			this.value.HeaderText = "Value";
-			this.value.MinimumWidth = 6;
+			resources.ApplyResources(this.value, "value");
 			this.value.Name = "value";
+			// 
+			// panel8
+			// 
+			this.panel8.Controls.Add(this.label2);
+			resources.ApplyResources(this.panel8, "panel8");
+			this.panel8.Name = "panel8";
 			// 
 			// label2
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(3, 5);
+			resources.ApplyResources(this.label2, "label2");
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(121, 17);
-			this.label2.TabIndex = 0;
-			this.label2.Text = "Body/Parameters:";
 			// 
 			// Form1
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1086, 662);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			resources.ApplyResources(this, "$this");
 			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
+			this.MaximizeBox = false;
 			this.Name = "Form1";
-			this.Text = "API CALLER";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.panel1.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.panel2.ResumeLayout(false);
 			this.panel2.PerformLayout();
+			this.panel5.ResumeLayout(false);
+			this.panel4.ResumeLayout(false);
 			this.panel3.ResumeLayout(false);
 			this.panelResponse.ResumeLayout(false);
 			this.panelResponse.PerformLayout();
 			this.panelRequest.ResumeLayout(false);
-			this.panelRequest.PerformLayout();
+			this.PanelHeaders.ResumeLayout(false);
+			this.panel11.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvHeaders)).EndInit();
+			this.panel10.ResumeLayout(false);
+			this.panel10.PerformLayout();
+			this.panelParameters.ResumeLayout(false);
+			this.panel9.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvBody)).EndInit();
+			this.panel8.ResumeLayout(false);
+			this.panel8.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -347,6 +358,15 @@ namespace Api_Caller
 		private System.Windows.Forms.DataGridViewTextBoxColumn key;
 		private System.Windows.Forms.DataGridViewTextBoxColumn value;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Button btnClearParams;
+		private System.Windows.Forms.Panel panel5;
+		private System.Windows.Forms.Panel panel4;
+		private System.Windows.Forms.Panel panelParameters;
+		private System.Windows.Forms.Panel PanelHeaders;
+		private System.Windows.Forms.Panel panel11;
+		private System.Windows.Forms.Panel panel10;
+		private System.Windows.Forms.Panel panel9;
+		private System.Windows.Forms.Panel panel8;
 	}
 }
 
