@@ -32,6 +32,8 @@ namespace Api_Caller.UI.RequestManagers
 
 			httpHelper.Client.BaseAddress = new Uri(Url);
 			Response = await httpHelper.PostResponseAsync(body);
+
+			httpHelper.Client.Dispose();
 		}
 
 		private void SetRequestHeaders()

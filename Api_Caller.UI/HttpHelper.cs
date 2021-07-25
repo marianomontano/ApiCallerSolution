@@ -10,26 +10,17 @@ namespace Api_Caller.UI
 	public class HttpHelper
 	{
 		private static HttpHelper httpHelper;
-		private readonly SimpleFactory simpleFactory;
+		private readonly SimpleFactory factory;
 		private readonly JsonBeautifier JsonBeautifier;
-		public HttpClient Client { get; }
+		public  HttpClient Client { get; private set; }
 
 
-		private HttpHelper(SimpleFactory simpleFactory)
+		public HttpHelper(SimpleFactory simpleFactory)
 		{
-			this.simpleFactory = simpleFactory;
-			Client = simpleFactory.GetHttpClientInstance();
-			JsonBeautifier = simpleFactory.GetJsonBeautifierInstance();
-		}
-
-		public static HttpHelper Instance(SimpleFactory simpleFactory)
-		{
-				if(httpHelper == null)
-				{
-					httpHelper = new HttpHelper(simpleFactory);
-				}
-
-				return httpHelper;
+			factory = simpleFactory;
+			Client = factory.GetHttpClientInstance();
+			Client.Timeout = factory.GetTimeSpanInstance(0, 5, 0);
+			JsonBeautifier = factory.GetJsonBeautifierInstance();
 		}
 
 		public HttpHelper SetClientUrl(string url)
@@ -52,7 +43,7 @@ namespace Api_Caller.UI
 		{
 			var response = await Client.GetAsync("", HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(false);
 
-			StringBuilder stringBuilder = simpleFactory.GetStringBuilderInstance();
+			StringBuilder stringBuilder = factory.GetStringBuilderInstance();
 
 			stringBuilder.AppendLine("Response Status Code:");
 			stringBuilder.AppendLine($"{(int)response.StatusCode} {response.ReasonPhrase} {Environment.NewLine}");
@@ -71,11 +62,11 @@ namespace Api_Caller.UI
 
 		public async Task<string> PostResponseAsync(string body)
 		{
-			HttpContent content = simpleFactory.GetStringContentInstance(body);
-			var response = await httpHelper.Client.PostAsync("", content);
+			HttpContent content = factory.GetStringContentInstance(body);
+			var response = await Client.PostAsync("", content);
 
 
-			StringBuilder stringBuilder = simpleFactory.GetStringBuilderInstance();
+			StringBuilder stringBuilder = factory.GetStringBuilderInstance();
 
 			stringBuilder.AppendLine("Response Status Code:");
 			stringBuilder.AppendLine($"{(int)response.StatusCode} {response.ReasonPhrase} {Environment.NewLine}");

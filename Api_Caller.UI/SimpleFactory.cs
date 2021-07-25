@@ -59,7 +59,7 @@ namespace Api_Caller.UI
 
 		public HttpHelper GetHttpHelperInstance()
 		{
-			return HttpHelper.Instance(Instance);
+			return new HttpHelper(Instance);
 		}
 
 		public HttpClient GetHttpClientInstance()
@@ -95,6 +95,11 @@ namespace Api_Caller.UI
 		public StringContent GetStringContentInstance(string body)
 		{
 			return new StringContent(body, Encoding.UTF8, "application/json");
+		}
+
+		public TimeSpan GetTimeSpanInstance(int hours, int minutes, int seconds)
+		{
+			return new TimeSpan(hours, minutes, seconds);
 		}
 	}
 }

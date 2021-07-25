@@ -15,8 +15,7 @@ namespace Api_Caller.UI.RequestManagers
 	public class GetRequestManager : IRequestManager
 	{
 		private readonly HttpHelper httpHelper;
-		private readonly SimpleFactory simpleFactory;
-		private readonly JsonBeautifier jsonBeautifier;
+		private readonly SimpleFactory factory;
 
 		public string Url { get; set; }
 		public Dictionary<string, string> Parameters { get; set; }
@@ -25,9 +24,8 @@ namespace Api_Caller.UI.RequestManagers
 
 		public GetRequestManager(SimpleFactory simpleFactory)
 		{
-			this.simpleFactory = simpleFactory;
-			this.httpHelper = simpleFactory.GetHttpHelperInstance();
-			this.jsonBeautifier = simpleFactory.GetJsonBeautifierInstance();
+			factory = simpleFactory;
+			httpHelper = simpleFactory.GetHttpHelperInstance();
 			Url = String.Empty;
 			Parameters = simpleFactory.GetDictionaryInstance();
 			Headers = simpleFactory.GetDictionaryInstance();
@@ -42,6 +40,8 @@ namespace Api_Caller.UI.RequestManagers
 			SetRequestHeaders();
 
 			Response = await httpHelper.GetResponseAsync();
+
+			httpHelper.Client.Dispose();
 		}
 
 		private void SetRequestHeaders()
@@ -52,7 +52,7 @@ namespace Api_Caller.UI.RequestManagers
 
 		private void SetCompleteUrl()
 		{
-			StringBuilder stringBuilder = simpleFactory.GetStringBuilderInstance();
+			StringBuilder stringBuilder = factory.GetStringBuilderInstance();
 			stringBuilder.Append(Url);
 
 			if (Parameters != null && Parameters.Count > 0)

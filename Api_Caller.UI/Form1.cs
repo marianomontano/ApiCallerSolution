@@ -14,14 +14,12 @@ namespace Api_Caller
 {
 	public partial class Form1 : Form
 	{
-		private HttpHelper httpHelper;
-		private SimpleFactory simpleFactory;
+		private SimpleFactory factory;
 
-		public Form1(SimpleFactory factory)
+		public Form1(SimpleFactory simpleFactory)
 		{
 			InitializeComponent();
-			this.httpHelper = factory.GetHttpHelperInstance();
-			this.simpleFactory = factory;
+			factory = simpleFactory;
 		}
 
 		private void Form1_Load(object sender, EventArgs e)
@@ -84,19 +82,19 @@ namespace Api_Caller
 
 			if (radioGet.Checked)
 			{
-				manager = simpleFactory.GetRequestManagerInstance();
+				manager = factory.GetRequestManagerInstance();
 			}
 			else if (radioPost.Checked)
 			{
-				manager = simpleFactory.GetPostRequestManagerInstance();
+				manager = factory.GetPostRequestManagerInstance();
 			}
 			else if (radioPut.Checked)
 			{
-				manager = simpleFactory.GetPutRequestManagerInstance();
+				manager = factory.GetPutRequestManagerInstance();
 			}
 			else if (radioDelete.Checked)
 			{
-				manager = simpleFactory.GetDeleteRequestManagerInstance();
+				manager = factory.GetDeleteRequestManagerInstance();
 			}
 			else
 			{
