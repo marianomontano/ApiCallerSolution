@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Api_Caller.UI.RequestManagers
@@ -8,6 +9,7 @@ namespace Api_Caller.UI.RequestManagers
 		string Url { get; set; }
 		Dictionary<string, string> Parameters { get; set; }
 		Dictionary<string, string> Headers { get; set; }
+		Tuple<string, string> Authorization { get; set; }
 		string Response { get; set; }
 		Task SendRequest();
 	}

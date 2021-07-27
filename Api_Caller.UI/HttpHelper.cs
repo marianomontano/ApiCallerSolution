@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.Http.Headers;
 
 namespace Api_Caller.UI
 {
@@ -35,13 +36,19 @@ namespace Api_Caller.UI
 
 		public HttpHelper SetClientHeaders(Dictionary<string, string> headers)
 		{
-			Client.DefaultRequestHeaders.Clear();
+			//Client.DefaultRequestHeaders.Clear();
 
 			foreach (var header in headers)
 			{
 				Client.DefaultRequestHeaders.Add(header.Key, header.Value);
 			}
 
+			return this;
+		}
+
+		public HttpHelper SetAuthorizationHeader(string type, string value)
+		{
+			Client.DefaultRequestHeaders.Add("Authorization", $"{type} {value}");
 			return this;
 		}
 
@@ -83,7 +90,7 @@ namespace Api_Caller.UI
 				stringBuilder.AppendLine(header.ToString());
 
 			var body = await response.Content.ReadAsStringAsync();
-			stringBuilder.AppendLine($"{Environment.NewLine} Response Body:");
+			stringBuilder.AppendLine($"{Environment.NewLine}Response Body:");
 
 			stringBuilder.Append(JsonBeautifier.Beautify(body));
 			var responseString = stringBuilder.ToString();

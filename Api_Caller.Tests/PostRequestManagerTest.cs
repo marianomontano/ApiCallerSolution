@@ -11,7 +11,7 @@ namespace Api_Caller.Tests
 {
     public class PostRequestManagerTest
     {
-        [Fact]
+        [Fact(Skip = "private method")]
         public void GetBodyString_ShouldReturnString()
 		{
             var sut = new PostRequestManager(SimpleFactory.Instance);
@@ -23,5 +23,23 @@ namespace Api_Caller.Tests
 
             //Assert.Equal(expected, actual);
 		}
+
+        [Theory]
+        [InlineData("{\"id\": 1, \"nombre\": \"mariano\"}", 
+            "{\r\n  \"id\": 1,\r\n  \"nombre\": \"mariano\"\r\n}")]
+        [InlineData("\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwibm9tYnJlIjoiTWFyaWFubyIsImFwZWxsaWRvIjoiTW9udGFubyIsImVtYWlsIjoibW9udGFuby5tYXJpYW5vQGdtYWlsLmNvbSIsIm5iZiI6MTYyNzMxMTI4NywiZXhwIjoxNjI3MzI5Mjg3LCJpc3MiOiJ3d3cuZWR1Y2FjaW9uaXQuY29tIiwiYXVkIjoid3d3LmRvbWluaW8uY29tL2FwaS93ZWJhcGlJVCJ9.9XhmtaM1Nmw1UkQqIoPFn0PFwmYQQWx8GapleRQjd-\"",
+            "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwibm9tYnJlIjoiTWFyaWFubyIsImFwZWxsaWRvIjoiTW9udGFubyIsImVtYWlsIjoibW9udGFuby5tYXJpYW5vQGdtYWlsLmNvbSIsIm5iZiI6MTYyNzMxMTI4NywiZXhwIjoxNjI3MzI5Mjg3LCJpc3MiOiJ3d3cuZWR1Y2FjaW9uaXQuY29tIiwiYXVkIjoid3d3LmRvbWluaW8uY29tL2FwaS93ZWJhcGlJVCJ9.9XhmtaM1Nmw1UkQqIoPFn0PFwmYQQWx8GapleRQjd-\"")]  
+
+        public void JsonBeautifier_ShouldReturnString(string param, string expectedResult)
+		{
+            string token = param;
+            var sut = new JsonBeautifier(SimpleFactory.Instance);
+
+            string expected = expectedResult;
+
+            var actual = sut.Beautify(token);
+
+            Assert.Equal(expected, actual);
+        }
     }
 }

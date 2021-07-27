@@ -11,7 +11,6 @@ namespace Api_Caller.UI
 	public class JsonBeautifier
 	{
 		private readonly SimpleFactory simpleFactory;
-
 		public JsonBeautifier(SimpleFactory simpleFactory)
 		{
 			this.simpleFactory = simpleFactory;
@@ -19,23 +18,34 @@ namespace Api_Caller.UI
 
 		public string Beautify(string json)
 		{
+			string result = "";
 			if (json == null || json == "")
 			{
-				return "{ }";
+				result = "{ }";
 			}
 
-			using (var document = JsonDocument.Parse(json))
+			if (json.StartsWith("[") || json.StartsWith("{"))
 			{
-				using (var stream = simpleFactory.GetMemoryStreamInstance())
+				using (var jsonDocument = JsonDocument.Parse(json))
 				{
-					using (var writer = simpleFactory.GetUtf8JsonWriterInstance(stream))
+					using (var stream = simpleFactory.GetMemoryStreamInstance())
 					{
-						document.WriteTo(writer);
-						writer.Flush();
-						return Encoding.UTF8.GetString(stream.ToArray());
+						using (var writer = simpleFactory.GetUtf8JsonWriterInstance(stream))
+						{
+							jsonDocument.WriteTo(writer);
+							writer.Flush();
+							return Encoding.UTF8.GetString(stream.ToArray());
+						}
 					}
 				}
 			}
+
+			if (!json.StartsWith("\"") && !json.EndsWith("\""))
+			{
+				result = "\"" + json + "\"";
+			}
+
+			return result;
 		}
 	}
 }

@@ -20,15 +20,18 @@ namespace Api_Caller.UI.RequestManagers
 		public string Url { get; set; }
 		public Dictionary<string, string> Parameters { get; set; }
 		public Dictionary<string, string> Headers { get; set; }
+		public Tuple<string, string> Authorization { get; set; }
 		public string Response { get; set; }
+
+
 
 		public GetRequestManager(SimpleFactory simpleFactory)
 		{
 			factory = simpleFactory;
-			httpHelper = simpleFactory.GetHttpHelperInstance();
+			httpHelper = factory.GetHttpHelperInstance();
 			Url = String.Empty;
-			Parameters = simpleFactory.GetDictionaryInstance();
-			Headers = simpleFactory.GetDictionaryInstance();
+			Parameters = factory.GetDictionaryInstance();
+			Headers = factory.GetDictionaryInstance();
 			Response = String.Empty;
 		}
 
@@ -36,7 +39,7 @@ namespace Api_Caller.UI.RequestManagers
 		{
 
 			SetCompleteUrl();
-
+			SetAuthorizationHeader();
 			SetRequestHeaders();
 
 			Response = await httpHelper.GetResponseAsync();
@@ -48,6 +51,12 @@ namespace Api_Caller.UI.RequestManagers
 		{
 			if(Headers != null && Headers.Count > 0)
 				httpHelper.SetClientHeaders(Headers);
+		}
+
+		private void SetAuthorizationHeader()
+		{
+			if(Authorization != null)
+				httpHelper.SetAuthorizationHeader(Authorization.Item1, Authorization.Item2);
 		}
 
 		private void SetCompleteUrl()
@@ -68,7 +77,6 @@ namespace Api_Caller.UI.RequestManagers
 
 			//elimino el último & de la query string
 			httpHelper.SetClientUrl(stringBuilder.ToString());
-
 		}
 	}
 }

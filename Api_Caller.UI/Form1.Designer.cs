@@ -57,6 +57,9 @@ namespace Api_Caller
 			this.label3 = new System.Windows.Forms.Label();
 			this.panelParameters = new System.Windows.Forms.Panel();
 			this.panel9 = new System.Windows.Forms.Panel();
+			this.cmbAuth = new System.Windows.Forms.ComboBox();
+			this.txtAuth = new System.Windows.Forms.TextBox();
+			this.chkAuth = new System.Windows.Forms.CheckBox();
 			this.dgvBody = new System.Windows.Forms.DataGridView();
 			this.key = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -260,9 +263,30 @@ namespace Api_Caller
 			// 
 			// panel9
 			// 
+			this.panel9.Controls.Add(this.cmbAuth);
+			this.panel9.Controls.Add(this.txtAuth);
+			this.panel9.Controls.Add(this.chkAuth);
 			this.panel9.Controls.Add(this.dgvBody);
 			resources.ApplyResources(this.panel9, "panel9");
 			this.panel9.Name = "panel9";
+			// 
+			// cmbAuth
+			// 
+			resources.ApplyResources(this.cmbAuth, "cmbAuth");
+			this.cmbAuth.FormattingEnabled = true;
+			this.cmbAuth.Name = "cmbAuth";
+			// 
+			// txtAuth
+			// 
+			resources.ApplyResources(this.txtAuth, "txtAuth");
+			this.txtAuth.Name = "txtAuth";
+			// 
+			// chkAuth
+			// 
+			resources.ApplyResources(this.chkAuth, "chkAuth");
+			this.chkAuth.Name = "chkAuth";
+			this.chkAuth.UseVisualStyleBackColor = true;
+			this.chkAuth.CheckedChanged += new System.EventHandler(this.chkAuth_CheckedChanged);
 			// 
 			// dgvBody
 			// 
@@ -326,6 +350,7 @@ namespace Api_Caller
 			this.panel10.PerformLayout();
 			this.panelParameters.ResumeLayout(false);
 			this.panel9.ResumeLayout(false);
+			this.panel9.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvBody)).EndInit();
 			this.panel8.ResumeLayout(false);
 			this.panel8.PerformLayout();
@@ -367,6 +392,9 @@ namespace Api_Caller
 		private System.Windows.Forms.Panel panel10;
 		private System.Windows.Forms.Panel panel9;
 		private System.Windows.Forms.Panel panel8;
+		private System.Windows.Forms.TextBox txtAuth;
+		private System.Windows.Forms.CheckBox chkAuth;
+		private System.Windows.Forms.ComboBox cmbAuth;
 	}
 }
 
