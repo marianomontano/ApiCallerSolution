@@ -14,14 +14,14 @@ namespace Api_Caller.Tests
         [Fact(Skip = "private method")]
         public void GetBodyString_ShouldReturnString()
 		{
-            var sut = new PostRequestManager(SimpleFactory.Instance);
+            var sut = new PostRequestManager(SimpleFactory.GetHttpHelperInstance());
             sut.Parameters.Add("id", "1");
             sut.Parameters.Add("nombre", "mariano");
             string expected = "{\"id\"=1, \"nombre\"=\"mariano\"}";
 
-            //string actual = sut.GetBodyString();
+            string actual = sut.GetBodyString();
 
-            //Assert.Equal(expected, actual);
+            Assert.Equal(expected, actual);
 		}
 
         [Theory]
@@ -33,7 +33,7 @@ namespace Api_Caller.Tests
         public void JsonBeautifier_ShouldReturnString(string param, string expectedResult)
 		{
             string token = param;
-            var sut = new JsonBeautifier(SimpleFactory.Instance);
+            var sut = new JsonBeautifier();
 
             string expected = expectedResult;
 

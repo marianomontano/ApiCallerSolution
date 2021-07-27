@@ -10,10 +10,8 @@ namespace Api_Caller.UI
 {
 	public class JsonBeautifier
 	{
-		private readonly SimpleFactory simpleFactory;
-		public JsonBeautifier(SimpleFactory simpleFactory)
+		public JsonBeautifier()
 		{
-			this.simpleFactory = simpleFactory;
 		}
 
 		public string Beautify(string json)
@@ -28,9 +26,9 @@ namespace Api_Caller.UI
 			{
 				using (var jsonDocument = JsonDocument.Parse(json))
 				{
-					using (var stream = simpleFactory.GetMemoryStreamInstance())
+					using (var stream = SimpleFactory.GetMemoryStreamInstance())
 					{
-						using (var writer = simpleFactory.GetUtf8JsonWriterInstance(stream))
+						using (var writer = SimpleFactory.GetUtf8JsonWriterInstance(stream))
 						{
 							jsonDocument.WriteTo(writer);
 							writer.Flush();

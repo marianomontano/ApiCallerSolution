@@ -15,10 +15,10 @@ namespace Api_Caller.UI
 		[STAThread]
 		static void Main()
 		{
-			var factory = SimpleFactory.Instance;
+			var managerFactory = new RequestManagerFactory();
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Form1(factory));
+			Application.Run(new Form1(managerFactory));
 		}
 	}
 }

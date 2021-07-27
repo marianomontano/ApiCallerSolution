@@ -14,12 +14,12 @@ namespace Api_Caller
 {
 	public partial class Form1 : Form
 	{
-		private SimpleFactory factory;
+		private readonly IManagerFactory managerFactory;
 
-		public Form1(SimpleFactory simpleFactory)
+		public Form1(IManagerFactory managerFactory)
 		{
 			InitializeComponent();
-			factory = simpleFactory;
+			this.managerFactory = managerFactory;
 		}
 
 		private void Form1_Load(object sender, EventArgs e)
@@ -108,19 +108,19 @@ namespace Api_Caller
 
 			if (radioGet.Checked)
 			{
-				manager = factory.GetRequestManagerInstance();
+				manager = managerFactory.GetRequestManagerInstance();
 			}
 			else if (radioPost.Checked)
 			{
-				manager = factory.GetPostRequestManagerInstance();
+				manager = managerFactory.PostRequestManagerInstance();
 			}
 			else if (radioPut.Checked)
 			{
-				manager = factory.GetPutRequestManagerInstance();
+				manager = managerFactory.PutRequestManagerInstance();
 			}
 			else if (radioDelete.Checked)
 			{
-				manager = factory.GetDeleteRequestManagerInstance();
+				manager = managerFactory.DeleteRequestManagerInstance();
 			}
 			else
 			{

@@ -7,14 +7,12 @@ namespace Api_Caller.UI.RequestManagers
 	public class PutRequestManager : IRequestManager
 	{
 		private HttpHelper httpHelper;
-		private readonly SimpleFactory factory;
 
-		public PutRequestManager(SimpleFactory simpleFactory)
+		public PutRequestManager(HttpHelper helper)
 		{
-			factory = simpleFactory;
-			httpHelper = factory.GetHttpHelperInstance();
-			Parameters = factory.GetDictionaryInstance();
-			Headers = factory.GetDictionaryInstance();
+			httpHelper = helper;
+			Parameters = SimpleFactory.GetDictionaryInstance();
+			Headers = SimpleFactory.GetDictionaryInstance();
 		}
 
 		public string Url { get; set; }
@@ -33,7 +31,7 @@ namespace Api_Caller.UI.RequestManagers
 
 			Response = await httpHelper.PutResponseAsync(body);
 
-			httpHelper.DisposeHttpClient();
+			//httpHelper.DisposeHttpClient();
 		}
 
 		private void SetRequestHeaders()
@@ -50,7 +48,7 @@ namespace Api_Caller.UI.RequestManagers
 
 		private string GetBodyString()
 		{
-			var stringBuilder = factory.GetStringBuilderInstance();
+			var stringBuilder = SimpleFactory.GetStringBuilderInstance();
 			stringBuilder.Append("{");
 			if (Parameters != null && Parameters.Count > 0)
 			{

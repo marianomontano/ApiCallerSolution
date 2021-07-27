@@ -126,7 +126,7 @@
     <value>514, 21</value>
   </data>
   <data name="radioDelete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 21</value>
+    <value>67, 17</value>
   </data>
   <data name="radioDelete.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -153,7 +153,7 @@
     <value>390, 21</value>
   </data>
   <data name="radioPut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 21</value>
+    <value>47, 17</value>
   </data>
   <data name="radioPut.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -180,7 +180,7 @@
     <value>253, 21</value>
   </data>
   <data name="radioPost.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 21</value>
+    <value>54, 17</value>
   </data>
   <data name="radioPost.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -207,7 +207,7 @@
     <value>121, 21</value>
   </data>
   <data name="radioGet.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 21</value>
+    <value>47, 17</value>
   </data>
   <data name="radioGet.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -250,33 +250,33 @@
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panelMethods</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="panelMethods.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panelMethods.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelMethods.Size" type="System.Drawing.Size, System.Drawing">
     <value>1086, 61</value>
   </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+  <data name="panelMethods.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;panelMethods.Name" xml:space="preserve">
+    <value>panelMethods</value>
   </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelMethods.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelMethods.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelMethods.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="btnSend.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -289,7 +289,7 @@
     <value>120, 46</value>
   </data>
   <data name="btnSend.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="btnSend.Text" xml:space="preserve">
     <value>Send</value>
@@ -301,33 +301,33 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnSend.Parent" xml:space="preserve">
-    <value>panel5</value>
+    <value>panelBtnSend</value>
   </data>
   <data name="&gt;&gt;btnSend.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="panelBtnSend.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
   </data>
-  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panelBtnSend.Location" type="System.Drawing.Point, System.Drawing">
     <value>859, 0</value>
   </data>
-  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelBtnSend.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 46</value>
   </data>
-  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="panelBtnSend.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
-    <value>panel5</value>
+  <data name="&gt;&gt;panelBtnSend.Name" xml:space="preserve">
+    <value>panelBtnSend</value>
   </data>
-  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelBtnSend.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="&gt;&gt;panelBtnSend.Parent" xml:space="preserve">
+    <value>panelUrlButtons</value>
   </data>
-  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelBtnSend.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="btnClearParams.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -340,7 +340,7 @@
     <value>107, 46</value>
   </data>
   <data name="btnClearParams.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>0</value>
   </data>
   <data name="btnClearParams.Text" xml:space="preserve">
     <value>Clear Parameters</value>
@@ -352,33 +352,33 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnClearParams.Parent" xml:space="preserve">
-    <value>panel4</value>
+    <value>panelBtnClear</value>
   </data>
   <data name="&gt;&gt;btnClearParams.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="panelBtnClear.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
   </data>
-  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panelBtnClear.Location" type="System.Drawing.Point, System.Drawing">
     <value>979, 0</value>
   </data>
-  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelBtnClear.Size" type="System.Drawing.Size, System.Drawing">
     <value>107, 46</value>
   </data>
-  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="panelBtnClear.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
-    <value>panel4</value>
+  <data name="&gt;&gt;panelBtnClear.Name" xml:space="preserve">
+    <value>panelBtnClear</value>
   </data>
-  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelBtnClear.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="&gt;&gt;panelBtnClear.Parent" xml:space="preserve">
+    <value>panelUrlButtons</value>
   </data>
-  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelBtnClear.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="txtUrl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -391,7 +391,7 @@
     <value>74, 7</value>
   </data>
   <data name="txtUrl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>779, 30</value>
+    <value>779, 26</value>
   </data>
   <data name="txtUrl.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -403,7 +403,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtUrl.Parent" xml:space="preserve">
-    <value>panel2</value>
+    <value>panelUrlButtons</value>
   </data>
   <data name="&gt;&gt;txtUrl.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -418,7 +418,7 @@
     <value>12, 10</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 25</value>
+    <value>46, 20</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -433,33 +433,33 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel2</value>
+    <value>panelUrlButtons</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="panelUrlButtons.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panelUrlButtons.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 61</value>
   </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelUrlButtons.Size" type="System.Drawing.Size, System.Drawing">
     <value>1086, 46</value>
   </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="panelUrlButtons.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
+  <data name="&gt;&gt;panelUrlButtons.Name" xml:space="preserve">
+    <value>panelUrlButtons</value>
   </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelUrlButtons.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelUrlButtons.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelUrlButtons.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
@@ -469,7 +469,7 @@
     <value>6, 5</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 17</value>
+    <value>58, 13</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -505,7 +505,7 @@
     <value>454, 526</value>
   </data>
   <data name="txtResponse.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;txtResponse.Name" xml:space="preserve">
     <value>txtResponse</value>
@@ -529,7 +529,7 @@
     <value>454, 555</value>
   </data>
   <data name="panelResponse.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;panelResponse.Name" xml:space="preserve">
     <value>panelResponse</value>
@@ -538,7 +538,7 @@
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panelResponse.Parent" xml:space="preserve">
-    <value>panel3</value>
+    <value>panelMain</value>
   </data>
   <data name="&gt;&gt;panelResponse.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -571,7 +571,7 @@
     <value>632, 201</value>
   </data>
   <data name="dgvHeaders.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;dgvHeaders.Name" xml:space="preserve">
     <value>dgvHeaders</value>
@@ -580,33 +580,33 @@
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dgvHeaders.Parent" xml:space="preserve">
-    <value>panel11</value>
+    <value>panelHeadersGrid</value>
   </data>
   <data name="&gt;&gt;dgvHeaders.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="panel11.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="panelHeadersGrid.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="panel11.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panelHeadersGrid.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 25</value>
   </data>
-  <data name="panel11.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelHeadersGrid.Size" type="System.Drawing.Size, System.Drawing">
     <value>632, 201</value>
   </data>
-  <data name="panel11.TabIndex" type="System.Int32, mscorlib">
+  <data name="panelHeadersGrid.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;panel11.Name" xml:space="preserve">
-    <value>panel11</value>
+  <data name="&gt;&gt;panelHeadersGrid.Name" xml:space="preserve">
+    <value>panelHeadersGrid</value>
   </data>
-  <data name="&gt;&gt;panel11.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelHeadersGrid.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel11.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelHeadersGrid.Parent" xml:space="preserve">
     <value>PanelHeaders</value>
   </data>
-  <data name="&gt;&gt;panel11.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelHeadersGrid.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
@@ -616,7 +616,7 @@
     <value>3, 3</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 17</value>
+    <value>50, 13</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -631,33 +631,33 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>panel10</value>
+    <value>panelHeadersHead</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="panel10.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="panelHeadersHead.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panel10.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panelHeadersHead.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="panel10.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelHeadersHead.Size" type="System.Drawing.Size, System.Drawing">
     <value>632, 25</value>
   </data>
-  <data name="panel10.TabIndex" type="System.Int32, mscorlib">
+  <data name="panelHeadersHead.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;panel10.Name" xml:space="preserve">
-    <value>panel10</value>
+  <data name="&gt;&gt;panelHeadersHead.Name" xml:space="preserve">
+    <value>panelHeadersHead</value>
   </data>
-  <data name="&gt;&gt;panel10.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelHeadersHead.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel10.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelHeadersHead.Parent" xml:space="preserve">
     <value>PanelHeaders</value>
   </data>
-  <data name="&gt;&gt;panel10.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelHeadersHead.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="PanelHeaders.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -694,7 +694,7 @@
     <value>120, 266</value>
   </data>
   <data name="cmbAuth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 24</value>
+    <value>170, 21</value>
   </data>
   <data name="cmbAuth.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -706,7 +706,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;cmbAuth.Parent" xml:space="preserve">
-    <value>panel9</value>
+    <value>panelBodyGrid</value>
   </data>
   <data name="&gt;&gt;cmbAuth.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -718,10 +718,10 @@
     <value>296, 266</value>
   </data>
   <data name="txtAuth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>317, 22</value>
+    <value>317, 20</value>
   </data>
   <data name="txtAuth.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;txtAuth.Name" xml:space="preserve">
     <value>txtAuth</value>
@@ -730,7 +730,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtAuth.Parent" xml:space="preserve">
-    <value>panel9</value>
+    <value>panelBodyGrid</value>
   </data>
   <data name="&gt;&gt;txtAuth.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -742,13 +742,13 @@
     <value>True</value>
   </data>
   <data name="chkAuth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 266</value>
+    <value>1, 270</value>
   </data>
   <data name="chkAuth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 21</value>
+    <value>87, 17</value>
   </data>
   <data name="chkAuth.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="chkAuth.Text" xml:space="preserve">
     <value>Authorization</value>
@@ -760,7 +760,7 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;chkAuth.Parent" xml:space="preserve">
-    <value>panel9</value>
+    <value>panelBodyGrid</value>
   </data>
   <data name="&gt;&gt;chkAuth.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -793,7 +793,7 @@
     <value>632, 255</value>
   </data>
   <data name="dgvBody.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;dgvBody.Name" xml:space="preserve">
     <value>dgvBody</value>
@@ -802,33 +802,33 @@
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dgvBody.Parent" xml:space="preserve">
-    <value>panel9</value>
+    <value>panelBodyGrid</value>
   </data>
   <data name="&gt;&gt;dgvBody.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="panel9.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="panelBodyGrid.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="panel9.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panelBodyGrid.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 26</value>
   </data>
-  <data name="panel9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelBodyGrid.Size" type="System.Drawing.Size, System.Drawing">
     <value>632, 298</value>
   </data>
-  <data name="panel9.TabIndex" type="System.Int32, mscorlib">
+  <data name="panelBodyGrid.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;panel9.Name" xml:space="preserve">
-    <value>panel9</value>
+  <data name="&gt;&gt;panelBodyGrid.Name" xml:space="preserve">
+    <value>panelBodyGrid</value>
   </data>
-  <data name="&gt;&gt;panel9.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelBodyGrid.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel9.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelBodyGrid.Parent" xml:space="preserve">
     <value>panelParameters</value>
   </data>
-  <data name="&gt;&gt;panel9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelBodyGrid.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
@@ -838,7 +838,7 @@
     <value>3, 3</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 17</value>
+    <value>92, 13</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -853,33 +853,33 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>panel8</value>
+    <value>panelBodyHeader</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="panel8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="panelBodyHeader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panelBodyHeader.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelBodyHeader.Size" type="System.Drawing.Size, System.Drawing">
     <value>632, 26</value>
   </data>
-  <data name="panel8.TabIndex" type="System.Int32, mscorlib">
+  <data name="panelBodyHeader.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;panel8.Name" xml:space="preserve">
-    <value>panel8</value>
+  <data name="&gt;&gt;panelBodyHeader.Name" xml:space="preserve">
+    <value>panelBodyHeader</value>
   </data>
-  <data name="&gt;&gt;panel8.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelBodyHeader.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel8.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelBodyHeader.Parent" xml:space="preserve">
     <value>panelParameters</value>
   </data>
-  <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelBodyHeader.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="panelParameters.Location" type="System.Drawing.Point, System.Drawing">
@@ -922,33 +922,33 @@
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panelRequest.Parent" xml:space="preserve">
-    <value>panel3</value>
+    <value>panelMain</value>
   </data>
   <data name="&gt;&gt;panelRequest.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="panelMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panelMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 107</value>
   </data>
-  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelMain.Size" type="System.Drawing.Size, System.Drawing">
     <value>1086, 555</value>
   </data>
-  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+  <data name="panelMain.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;panelMain.Name" xml:space="preserve">
+    <value>panelMain</value>
   </data>
-  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelMain.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelMain.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panelMain.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

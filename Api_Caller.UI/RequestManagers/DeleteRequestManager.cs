@@ -7,14 +7,12 @@ namespace Api_Caller.UI.RequestManagers
 	public class DeleteRequestManager : IRequestManager
 	{
 		private HttpHelper httpHelper;
-		private readonly SimpleFactory factory;
 
-		public DeleteRequestManager(SimpleFactory simpleFactory)
+		public DeleteRequestManager(HttpHelper helper)
 		{
-			factory = simpleFactory;
-			httpHelper = simpleFactory.GetHttpHelperInstance();
-			Parameters = factory.GetDictionaryInstance();
-			Headers = factory.GetDictionaryInstance();
+			httpHelper = helper;
+			Parameters = SimpleFactory.GetDictionaryInstance();
+			Headers = SimpleFactory.GetDictionaryInstance();
 		}
 
 		public string Url { get; set; }
@@ -31,7 +29,7 @@ namespace Api_Caller.UI.RequestManagers
 
 			Response = await httpHelper.DeleteResponseAsync();
 
-			httpHelper.DisposeHttpClient();
+			//httpHelper.DisposeHttpClient();
 		}
 
 		private void SetRequestHeaders()
