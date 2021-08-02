@@ -18,7 +18,7 @@ namespace Api_Caller.UI
 			return new JsonBeautifier();
 		}
 
-		public static HttpHelper GetHttpHelperInstance()
+		public static IHttpHelper GetHttpHelperInstance()
 		{
 			return new HttpHelper(GetJsonBeautifierInstance());
 		}

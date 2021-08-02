@@ -8,9 +8,15 @@ namespace Api_Caller.UI.RequestManagers
 {
 	public class PostRequestManager : IRequestManager
 	{
-		private HttpHelper httpHelper;
+		private IHttpHelper httpHelper;
+		public PostRequestManager()
+		{
+			httpHelper = SimpleFactory.GetHttpHelperInstance();
+			Parameters = SimpleFactory.GetDictionaryInstance();
+			Headers = SimpleFactory.GetDictionaryInstance();
+		}
 
-		public PostRequestManager(HttpHelper helper)
+		public PostRequestManager(IHttpHelper helper)
 		{
 			httpHelper = helper;
 			Parameters = SimpleFactory.GetDictionaryInstance();

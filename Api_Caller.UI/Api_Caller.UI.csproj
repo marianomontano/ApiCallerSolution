@@ -84,6 +84,7 @@
     <Compile Include="RequestManagers\IManagerFactory.cs" />
     <Compile Include="RequestManagers\RequestManagerFactory.cs" />
     <Compile Include="Utitities\HttpHelper.cs" />
+    <Compile Include="Utitities\IHttpHelper.cs" />
     <Compile Include="Utitities\JsonBeautifier.cs" />
     <Compile Include="RequestManagers\DeleteRequestManager.cs" />
     <Compile Include="Form1.cs">

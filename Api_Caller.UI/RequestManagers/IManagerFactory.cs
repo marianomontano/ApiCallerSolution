@@ -9,13 +9,15 @@ namespace Api_Caller.UI
 {
 	public interface IManagerFactory
 	{
-		IRequestManager GetRequestManagerInstance();
+		IRequestManager GetRequestManagerInstance(IHttpHelper helper);
 
-		IRequestManager PostRequestManagerInstance();
+		IRequestManager PostRequestManagerInstance(IHttpHelper helper);
 
-		IRequestManager PutRequestManagerInstance();
+		IRequestManager PutRequestManagerInstance(IHttpHelper helper);
 
-		IRequestManager DeleteRequestManagerInstance();
+		IRequestManager DeleteRequestManagerInstance(IHttpHelper helper);
+
+		IRequestManager GetRequestManager<T>() where T : IRequestManager, new();
 
 	}
 }

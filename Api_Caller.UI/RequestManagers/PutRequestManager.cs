@@ -6,9 +6,16 @@ namespace Api_Caller.UI.RequestManagers
 {
 	public class PutRequestManager : IRequestManager
 	{
-		private HttpHelper httpHelper;
+		private IHttpHelper httpHelper;
 
-		public PutRequestManager(HttpHelper helper)
+		public PutRequestManager()
+		{
+			httpHelper = SimpleFactory.GetHttpHelperInstance();
+			Parameters = SimpleFactory.GetDictionaryInstance();
+			Headers = SimpleFactory.GetDictionaryInstance();
+		}
+
+		public PutRequestManager(IHttpHelper helper)
 		{
 			httpHelper = helper;
 			Parameters = SimpleFactory.GetDictionaryInstance();

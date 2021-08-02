@@ -108,19 +108,23 @@ namespace Api_Caller
 
 			if (radioGet.Checked)
 			{
-				manager = managerFactory.GetRequestManagerInstance();
+				//manager = managerFactory.GetRequestManagerInstance();
+				manager = managerFactory.GetRequestManager<GetRequestManager>();
 			}
 			else if (radioPost.Checked)
 			{
-				manager = managerFactory.PostRequestManagerInstance();
+				//manager = managerFactory.PostRequestManagerInstance();
+				manager = managerFactory.GetRequestManager<PostRequestManager>();
 			}
 			else if (radioPut.Checked)
 			{
-				manager = managerFactory.PutRequestManagerInstance();
+				//manager = managerFactory.PutRequestManagerInstance();
+				manager = managerFactory.GetRequestManager<PutRequestManager>();
 			}
 			else if (radioDelete.Checked)
 			{
-				manager = managerFactory.DeleteRequestManagerInstance();
+				//manager = managerFactory.DeleteRequestManagerInstance();
+				manager = managerFactory.GetRequestManager<DeleteRequestManager>();
 			}
 			else
 			{

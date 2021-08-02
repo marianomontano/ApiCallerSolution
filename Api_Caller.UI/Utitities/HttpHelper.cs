@@ -8,7 +8,7 @@ using System.Net.Http.Headers;
 
 namespace Api_Caller.UI
 {
-	public class HttpHelper
+	public class HttpHelper : IHttpHelper
 	{
 		private readonly JsonBeautifier JsonBeautifier;
 		private HttpClient Client;
@@ -46,7 +46,7 @@ namespace Api_Caller.UI
 			Client.DefaultRequestHeaders.Add("Authorization", $"{type} {value}");
 		}
 
-		internal async Task<string> DeleteResponseAsync()
+		public async Task<string> DeleteResponseAsync()
 		{
 			var response = await Client.DeleteAsync("");
 
@@ -99,6 +99,11 @@ namespace Api_Caller.UI
 			var jsonBody = await response.Content.ReadAsStringAsync();
 			stringBuilder.AppendLine($"{Environment.NewLine}Response Body:");
 
+			return ParseStringToJson(stringBuilder, jsonBody);
+		}
+
+		private string ParseStringToJson(StringBuilder stringBuilder, string jsonBody)
+		{
 			stringBuilder.Append(JsonBeautifier.Beautify(jsonBody));
 			return stringBuilder.ToString();
 		}

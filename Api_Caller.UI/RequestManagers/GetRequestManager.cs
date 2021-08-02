@@ -14,7 +14,7 @@ namespace Api_Caller.UI.RequestManagers
 {
 	public class GetRequestManager : IRequestManager
 	{
-		private readonly HttpHelper httpHelper;
+		private readonly IHttpHelper httpHelper;
 
 		public string Url { get; set; }
 		public Dictionary<string, string> Parameters { get; set; }
@@ -22,9 +22,16 @@ namespace Api_Caller.UI.RequestManagers
 		public Tuple<string, string> Authorization { get; set; }
 		public string Response { get; set; }
 
+		public GetRequestManager()
+		{
+			httpHelper = SimpleFactory.GetHttpHelperInstance();
+			Url = String.Empty;
+			Parameters = SimpleFactory.GetDictionaryInstance();
+			Headers = SimpleFactory.GetDictionaryInstance();
+			Response = String.Empty;
+		}
 
-
-		public GetRequestManager(HttpHelper helper)
+		public GetRequestManager(IHttpHelper helper)
 		{
 			httpHelper = helper;
 			Url = String.Empty;

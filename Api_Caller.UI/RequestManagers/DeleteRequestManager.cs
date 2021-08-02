@@ -6,9 +6,15 @@ namespace Api_Caller.UI.RequestManagers
 {
 	public class DeleteRequestManager : IRequestManager
 	{
-		private HttpHelper httpHelper;
+		private IHttpHelper httpHelper;
+		public DeleteRequestManager()
+		{
+			httpHelper = SimpleFactory.GetHttpHelperInstance();
+			Parameters = SimpleFactory.GetDictionaryInstance();
+			Headers = SimpleFactory.GetDictionaryInstance();
+		}
 
-		public DeleteRequestManager(HttpHelper helper)
+		public DeleteRequestManager(IHttpHelper helper)
 		{
 			httpHelper = helper;
 			Parameters = SimpleFactory.GetDictionaryInstance();
